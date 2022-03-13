@@ -8,15 +8,15 @@ default: &default
 
 development:
   <<: *default
-  database: hera_development
+  database: nuuvem_development
 
 
 test:
   <<: *default
-  database: hera_test
+  database: nuuvem_test
 
 production:
   <<: *default
-  database: hera_production
-  username: hera
-  password: <%= ENV["HERA_DATABASE_PASSWORD"] %>
+  database: nuuvem_production
+  username: nuuvem
+  password: <%= ENV["NUUVEM_DATABASE_PASSWORD"] %>

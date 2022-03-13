@@ -1,5 +1,5 @@
 # Dockerfile development version
-FROM ruby:3.0.2 AS hera-development
+FROM ruby:3.0.2 AS nuuvem-development
 
 ARG USER_ID
 ARG GROUP_ID
@@ -17,7 +17,7 @@ ENV INSTALL_PATH /opt/app
 RUN mkdir -p $INSTALL_PATH
 
 WORKDIR $INSTALL_PATH
-COPY hera/ .
+COPY nuuvem/ .
 RUN rm -rf node_modules vendor
 RUN gem install rails bundler unicorn
 RUN bundle install

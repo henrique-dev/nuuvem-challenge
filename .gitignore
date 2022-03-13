@@ -7,31 +7,31 @@
 .env
 
 # Ignore bundler config.
-/hera/.bundle
+/nuuvem/.bundle
 
 # Ignore all logfiles and tempfiles.
-/hera/log/*
-/hera/tmp/*
+/nuuvem/log/*
+/nuuvem/tmp/*
 !/log/.keep
 !/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/hera/tmp/pids/*
+/nuuvem/tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
 
 
-/hera/public/assets
-/hera/.byebug_history
+/nuuvem/public/assets
+/nuuvem/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/hera/config/master.key
+/nuuvem/config/master.key
 
-/hera/public/packs
-/hera/public/packs-test
-/hera/node_modules
-/hera/yarn-error.log
-/hera/yarn-debug.log*
-/hera/.yarn-integrity
+/nuuvem/public/packs
+/nuuvem/public/packs-test
+/nuuvem/node_modules
+/nuuvem/yarn-error.log
+/nuuvem/yarn-debug.log*
+/nuuvem/.yarn-integrity
 
 .env
