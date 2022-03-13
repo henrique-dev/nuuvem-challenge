@@ -1,0 +1,5 @@
+.git
+.dockerignore
+.env
+hera/node_modules/
+hera/vendor/bundle/
