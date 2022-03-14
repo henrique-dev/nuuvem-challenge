@@ -4,7 +4,7 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-.env
+# .env
 
 # Ignore bundler config.
 /nuuvem/.bundle
@@ -33,5 +33,3 @@
 /nuuvem/yarn-error.log
 /nuuvem/yarn-debug.log*
 /nuuvem/.yarn-integrity
-
-.env
