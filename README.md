@@ -21,6 +21,7 @@ The application MUST:
 Steps to run the application:
 ```
 docker-compose build
+docker-compose run nuuvem yarn install
 docker-compose run nuuvem rails db:create
 docker-compose run nuuvem rails db:migrate
 docker-compose run nuuvem rails db:test:prepare
