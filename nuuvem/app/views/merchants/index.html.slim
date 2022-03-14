@@ -1,0 +1,14 @@
+.card.card-items
+  .card-body
+    .mb-3
+      h3 Registered sellers
+    table.table.table-responsive
+      thead
+        tr
+          th Name
+          th Address
+      tbody
+        - @merchants.each do |merchant|
+          tr
+            td width='50%' = merchant.name
+            td width='50%' = merchant.address.full_address

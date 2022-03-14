@@ -1,0 +1,34 @@
+.container-fluid
+  - if @messages && !@messages&.empty?
+    div
+      ul
+        - @messages.each do |msg|
+          li
+            = msg
+  .card.m-4
+    .card-body
+      .mb-3
+        h3 Choose the files to import the data
+      = form_for :uploaded_file, url: home_import_file_path, remote: true, method: :put, html: { multipart: true } do |f|
+        = f.file_field :attachment, class: 'form-control', type: "file", multiple: 'multiple'
+        br
+        = f.submit "Send", class: 'btn btn-primary'
+  .row
+    .col-6
+      .card.m-4
+        .card-body
+          .mb-3
+            h4 Total gross revenue
+            h3#total_gross = @total
+    .col-6
+      .card.m-4
+        .card-body
+          .mb-3
+            h4 Gross revenue from last file
+            h3#partial_total_gross = @last_total
+  .row.container-pagination-top
+    = paginate @item_purchases
+  #main_container
+    = render :partial => 'purchases/purchases', locals: { item_purchases: @item_purchases }
+  .row.container-pagination-top
+    = paginate @item_purchases

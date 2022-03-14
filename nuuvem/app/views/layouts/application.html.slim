@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title
+      | Teste
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    .container-fluid
+      #mySidenav.sidenav
+        a[href=home_path]
+          | Import
+        a[href=clients_path]
+          | Customers
+        a[href=items_path]
+          | Items
+        a[href=merchants_path]
+          | Sellers
+      #main
+        = yield

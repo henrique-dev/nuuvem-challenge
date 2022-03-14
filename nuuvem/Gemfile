@@ -15,6 +15,9 @@ gem 'unicorn', '~> 6.1'
 # unicorn-rails overrides the Rack::Handler.default method to return Rack::Handler::Unicorn which will cause rack (and rails) to use unicorn by default.
 gem 'unicorn-rails', '~> 2.2', '>= 2.2.1'
 
+# Use webpack to manage app-like JavaScript modules in Rails
+gem 'webpacker', '~> 5.4', '>= 5.4.3'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -26,6 +29,18 @@ gem 'unicorn-rails', '~> 2.2', '>= 2.2.1'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
+
+# This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
+gem 'jquery-rails', '~> 4.4'
+
+# Upload files in your Ruby applications, map them to a range of ORMs, store them on different backends
+gem 'carrierwave', '~> 0.11.2'
+
+# Slim is a template language whose goal is reduce the syntax to the essential parts without becoming cryptic
+gem 'slim', '~> 3.0', '>= 3.0.6'
+
+# Provides the generator settings required for Rails 3+ to use Slim
+gem 'slim-rails', '~> 3.1', '>= 3.1.1'
 
 # Sidekiq Batch Jobs Implementation
 gem 'sidekiq-batch', '~> 0.1.3'
@@ -48,13 +63,25 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
-gem 'hermes', git: "https://#{ENV["USER_GITHUB"]}:#{ENV["TOKEN_GITHUB"]}@github.com/project-olimpo/hermes.git"
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
+  # RuboCop is a Ruby code style checking and code formatting tool. It aims to enforce the community-driven Ruby Style Guide
   gem 'rubocop', '~> 1.25', '>= 1.25.1'
+
+  # BDD for Ruby
+  gem 'rspec', '~> 3.11'
+
+  # rspec-rails is a testing framework for Rails 5+
+  gem 'rspec-rails', '~> 5.1'
+
+  # Set of matchers and helpers to allow you test your APIs responses like a pro
+  gem 'rspec-json_expectations', '~> 2.2'
+end
+
+group :test do
+  gem 'database_cleaner-active_record'
 end
 
 group :development do

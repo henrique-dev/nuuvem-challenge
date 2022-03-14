@@ -1,0 +1,12 @@
+.card.card-items
+  .card-body
+    .mb-3
+      h3 Registered customers
+    table.table.table-responsive
+      thead
+        tr
+          th Name
+      tbody
+        - @clients&.each do |client|
+          tr
+            td = client.name

@@ -1,0 +1,20 @@
+.card.card-items
+  .card-body
+    .mb-3
+      h3 Registered sales
+    table.table.table-responsive
+      thead
+        tr
+          th Customer
+          th Item
+          th Amount
+          th Price
+          th Total
+      tbody
+        - item_purchases&.each do |item_purchase|
+          tr
+            td = item_purchase.purchase.client.name
+            td width='500px' = item_purchase.item.description
+            td width='100px' = item_purchase.count
+            td width='150px' = item_purchase.item.price
+            td width='150px' = (item_purchase.count * item_purchase.item.price)
