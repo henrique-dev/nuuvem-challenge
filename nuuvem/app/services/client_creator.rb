@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
 # Documentation
-class ClientCreator
+class ClientCreator < ApplicationService
 
   def initialize(name:)
     @name = name
-  end
-
-  def self.call(**args)
-    new(**args).create_client
   end
 
   def call

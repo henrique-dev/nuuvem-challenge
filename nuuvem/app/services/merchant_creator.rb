@@ -1,15 +1,11 @@
 # frozen_string_literal: true
 
 # Documentation
-class MerchantCreator
+class MerchantCreator < ApplicationService
 
   def initialize(name:, full_address:)
     @name = name
     @full_address = full_address
-  end
-
-  def self.call(**args)
-    new(**args).create_merchant
   end
 
   def call

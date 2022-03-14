@@ -1,18 +1,14 @@
 # frozen_string_literal: true
 
 # Documentation
-class FileCreator
+class FileCreator < ApplicationService
 
   def initialize(files:)
     @files = files
   end
 
-  def self.call(**args)
-    new(**args).create_files
-  end
-
   def call
-    create_item
+    create_files
   end
 
   def create_files

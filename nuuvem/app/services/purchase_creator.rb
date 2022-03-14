@@ -1,15 +1,11 @@
 # frozen_string_literal: true
 
 # Documentation
-class PurchaseCreator
+class PurchaseCreator < ApplicationService
 
   def initialize(client:, merchant:)
     @client = client
     @merchant = merchant
-  end
-
-  def self.call(**args)
-    new(**args).create_purchase
   end
 
   def call

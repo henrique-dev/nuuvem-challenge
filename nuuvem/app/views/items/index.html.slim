@@ -1,14 +1,15 @@
-.card.card-items
-  .card-body
-    .mb-3
-      h3 Registered items
-    table.table.table-responsive
-      thead
-        tr
-          th Description
-          th Seller
-      tbody
-        - @items&.each do |item|
+.container-fluid
+  .card.m-4
+    .card-body
+      .mb-3
+        h3 Registered items
+      table.table.table-responsive
+        thead
           tr
-            td width='50%' = item.description
-            td width='50%' = item.merchant.name
+            th Description
+            th Seller
+        tbody
+          - @items&.each do |item|
+            tr
+              td width='50%' = item.description
+              td width='50%' = item.merchant.name

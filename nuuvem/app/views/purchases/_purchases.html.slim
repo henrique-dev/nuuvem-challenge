@@ -16,5 +16,5 @@
             td = item_purchase.purchase.client.name
             td width='500px' = item_purchase.item.description
             td width='100px' = item_purchase.count
-            td width='150px' = item_purchase.item.price
-            td width='150px' = (item_purchase.count * item_purchase.item.price)
+            td width='150px' = format('%.2f', item_purchase.item.price)
+            td width='150px' = format('%.2f', (item_purchase.count * item_purchase.item.price))

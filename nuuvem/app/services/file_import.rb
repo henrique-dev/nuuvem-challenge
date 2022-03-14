@@ -1,16 +1,12 @@
 # frozen_string_literal: true
 
 # Documentation
-class FileImport
+class FileImport < ApplicationService
 
   def initialize(file_upload:, file: nil)
     @file_upload = file_upload
     @file = file
     @file ||= ActiveStorage::Blob.service.path_for(file_upload.purchase_data.key)
-  end
-
-  def self.call(**args)
-    new(**args).import_a_file
   end
 
   def call

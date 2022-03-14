@@ -12,7 +12,7 @@
       = form_for :uploaded_file, url: home_import_file_path, remote: true, method: :put, html: { multipart: true } do |f|
         = f.file_field :attachment, class: 'form-control', type: "file", multiple: 'multiple'
         br
-        = f.submit "Send", class: 'btn btn-primary'
+        = f.submit "Send", class: 'btn btn-secondary'
   .row
     .col-6
       .card.m-4

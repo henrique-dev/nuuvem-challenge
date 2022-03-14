@@ -1,14 +1,15 @@
-.card.card-items
-  .card-body
-    .mb-3
-      h3 Registered sellers
-    table.table.table-responsive
-      thead
-        tr
-          th Name
-          th Address
-      tbody
-        - @merchants.each do |merchant|
+.container-fluid
+  .card.m-4
+    .card-body
+      .mb-3
+        h3 Registered sellers
+      table.table.table-responsive
+        thead
           tr
-            td width='50%' = merchant.name
-            td width='50%' = merchant.address.full_address
+            th Name
+            th Address
+        tbody
+          - @merchants.each do |merchant|
+            tr
+              td width='50%' = merchant.name
+              td width='50%' = merchant.address.full_address

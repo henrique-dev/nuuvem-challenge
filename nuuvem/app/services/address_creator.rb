@@ -1,15 +1,11 @@
 # frozen_string_literal: true
 
 # Documentation
-class AddressCreator
+class AddressCreator < ApplicationService
 
   def initialize(full_address:, code:)
     @full_address = full_address
     @code = code
-  end
-
-  def self.call(**args)
-    new(**args).create_address
   end
 
   def call

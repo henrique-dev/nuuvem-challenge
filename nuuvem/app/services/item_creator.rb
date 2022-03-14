@@ -1,16 +1,12 @@
 # frozen_string_literal: true
 
 # Documentation
-class ItemCreator
+class ItemCreator < ApplicationService
 
   def initialize(description:, price:, merchant:)
     @description = description
     @price = price
     @merchant = merchant
-  end
-
-  def self.call(**args)
-    new(**args).create_item
   end
 
   def call

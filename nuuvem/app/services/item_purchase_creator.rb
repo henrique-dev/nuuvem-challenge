@@ -1,16 +1,12 @@
 # frozen_string_literal: true
 
 # Documentation
-class ItemPurchaseCreator
+class ItemPurchaseCreator < ApplicationService
 
   def initialize(count:, item:, purchase:)
     @count = count
     @item = item
     @purchase = purchase
-  end
-
-  def self.call(**args)
-    new(**args).create_item_purchase
   end
 
   def call
